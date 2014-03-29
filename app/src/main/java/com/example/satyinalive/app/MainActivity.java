@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridView;
 
+import com.facebook.HttpMethod;
 import com.facebook.LoggingBehavior;
 import com.facebook.Request;
 import com.facebook.Response;
@@ -35,7 +36,6 @@ public class MainActivity extends ActionBarActivity {
         uiHelper = new UiLifecycleHelper(this, callback);
         uiHelper.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.activity_main);
         ArrayList<Contact> profiles = new ArrayList<Contact>(10);
         for (int i = 0; i<10; i++) {
@@ -50,8 +50,8 @@ public class MainActivity extends ActionBarActivity {
         getActionBar().setDisplayHomeAsUpEnabled(false);
         getActionBar().setDisplayShowTitleEnabled(false);
         getActionBar().setDisplayUseLogoEnabled(false);
-    }
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -81,6 +81,8 @@ public class MainActivity extends ActionBarActivity {
     private void onSessionStateChange(Session session, SessionState state, Exception exception) {
         if (state.isOpened()) {
             Log.i(TAG, "Logged in...");
+            fetchFriends(session);
+
         } else if (state.isClosed()) {
             Log.i(TAG, "Logged out...");
         }
@@ -126,6 +128,49 @@ public class MainActivity extends ActionBarActivity {
     public void createGroup() {
         Intent intent = new Intent(this, Group.class);
         startActivity(intent);
+    }
+
+    private void testFB() {
+        Settings.addLoggingBehavior(LoggingBehavior.INCLUDE_ACCESS_TOKENS);
+        Settings.addLoggingBehavior(LoggingBehavior.REQUESTS);
+
+        Request request = Request.newGraphPathRequest(null, "/4", new Request.Callback() {
+            @Override
+            public void onCompleted(Response response) {
+                if(response.getError() != null) {
+                    Log.i("MainActivity", String.format("Error making request: %s", response.getError()));
+                } else {
+                    GraphUser user = response.getGraphObjectAs(GraphUser.class);
+                    Log.i("MainActivity", String.format("Name: %s", user.getName()));
+                }
+            }
+        });
+        request.executeAsync();
+    }
+
+    private void fetchFriends(Session session) {
+        Log.e("SMR", "fetchFriends");
+
+        Bundle params = new Bundle();
+        params.putString("fields", "friends.fields(name,id,picture.type(normal))");
+
+        /* make the API call */
+        new Request(
+                session,
+                "/me",
+                params,
+                HttpMethod.GET,
+                new Request.Callback() {
+                    public void onCompleted(Response response) {
+                        Log.e("SMR", response.toString());
+                        if(response.getError() != null ) {
+                            Log.e("SMR", "Error");
+                        } else {
+                            Log.e("SMR", "No error");
+                        }
+                    }
+                }
+        ).executeAsync();
     }
 
 }

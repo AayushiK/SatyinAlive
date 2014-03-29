@@ -19,6 +19,5 @@ public class ContactActivity extends Activity {
         setContentView(R.layout.activity_profile);
         TextView name = (TextView) findViewById(R.id.username);
         name.setText("Aayushi");
-
     }
 }
