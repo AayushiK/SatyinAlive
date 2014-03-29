@@ -50,7 +50,7 @@ public class Adapter extends BaseAdapter{
         ImageView image = new ImageView(mContext);
         image.setImageBitmap(BitmapFactory.decodeResource(
                 mContext.getResources(),
-                R.drawable.ic_launcher));
+                R.drawable.profile));
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +64,7 @@ public class Adapter extends BaseAdapter{
                 mContext.startActivity(mainIntent);
             }
         });
+        image.setPadding(10, 10, 10, 10);
         //set onClickListener for image here to launch a new fragment.
         return image;
     }
