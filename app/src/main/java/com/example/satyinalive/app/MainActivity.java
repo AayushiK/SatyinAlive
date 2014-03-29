@@ -1,6 +1,7 @@
 package com.example.satyinalive.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.support.v7.app.ActionBarActivity;
@@ -28,6 +29,10 @@ public class MainActivity extends ActionBarActivity {
         GridView gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(adapter);
         Log.d("rawr", "workin");
+
+        getActionBar().setDisplayHomeAsUpEnabled(false);
+        getActionBar().setDisplayShowTitleEnabled(false);
+        getActionBar().setDisplayUseLogoEnabled(false);
     }
 
 
@@ -47,8 +52,18 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
+        } else if (id == R.id.action_create){
+            createGroup();
+            return true;
+        } else if ((id == R.id.action_delete)) {
+
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void createGroup() {
+        Intent intent = new Intent(this, Group.class);
+        startActivity(intent);
     }
 
 }
