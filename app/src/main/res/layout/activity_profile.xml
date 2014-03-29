@@ -26,6 +26,39 @@
                 android:textColor="@color/white"
                 android:text="Name:"/>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/send_location"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/red"/>
+        <ImageView
+            android:id="@+id/regular_update"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/send_location"
+            android:src="@drawable/red"/>
+        <ImageView
+            android:id="@+id/send_ok"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/red"/>
+        <ImageView
+            android:id="@+id/send_not_ok"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/send_ok"
+            android:src="@drawable/red"/>
+    </RelativeLayout>
 
 
 
