@@ -2,10 +2,10 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/smolinerroy/Code/FBHackathon3/SatyinAlive/fb/src/main/assets" />
+        <source path="/Users/aayushi/AndroidStudioProjects/SatyinAlive/fb/src/main/assets" />
     </dataSet>
     <dataSet config="release" >
-        <source path="/Users/smolinerroy/Code/FBHackathon3/SatyinAlive/fb/src/release/assets" />
+        <source path="/Users/aayushi/AndroidStudioProjects/SatyinAlive/fb/src/release/assets" />
     </dataSet>
 
 </merger>
