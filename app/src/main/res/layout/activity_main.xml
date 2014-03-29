@@ -6,7 +6,7 @@
     android:numColumns="auto_fit"
     android:columnWidth="80dp"
     android:horizontalSpacing="5dp"
-    android:verticalSpacing="5dp"
+    android:verticalSpacing="20dp"
     tools:context="com.example.hurryup.app.MainActivity">
 
 </GridView>
