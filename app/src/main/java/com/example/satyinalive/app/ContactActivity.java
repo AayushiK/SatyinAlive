@@ -28,9 +28,22 @@ public class ContactActivity extends Activity implements View.OnClickListener {
         sendOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(
+                Intent messengerIntent = new Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("fb://messaging/{user_id}")));
+                        Uri.parse("fb://messaging/{user_id}"));
+                messengerIntent.putExtra(Intent.EXTRA_TEXT, "I'm okay!");
+                startActivity(messengerIntent);
+            }
+        });
+        ImageView sendNotOK = (ImageView) findViewById(R.id.send_not_ok);
+        sendOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent messengerIntent = new Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("fb://messaging/{user_id}"));
+                messengerIntent.putExtra(Intent.EXTRA_TEXT, "I'm not okay.");
+                startActivity(messengerIntent);
             }
         });
 

@@ -39,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         ArrayList<Contact> profiles = new ArrayList<Contact>(10);
         for (int i = 0; i < 10; i++) {
-            profiles.add(new Contact("10", null));
+            profiles.add(new Contact("id", "url", "name"));
         }
         Adapter adapter = new Adapter(this);
         adapter.setContacts(profiles);
