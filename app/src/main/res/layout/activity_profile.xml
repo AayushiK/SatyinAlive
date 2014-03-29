@@ -5,7 +5,25 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-
-
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp">
+        <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile"/>
+        <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:textSize="24dp"
+                android:textColor="@color/white"
+                android:text="Name:"/>
+    </LinearLayout>
 
 </LinearLayout>
