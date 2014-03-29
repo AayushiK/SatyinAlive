@@ -1,16 +1,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="fill_parent"
-    android:layout_width="wrap_content"
-    android:background="@android:color/holo_blue_dark"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/black"
     tools:ignore="NewApi">
 
     <com.facebook.widget.LoginButton
         android:id="@+id/authButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
         />
 
 <GridView
@@ -18,10 +17,11 @@
     android:id="@+id/grid_view"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_marginTop="10dp"
     android:numColumns="auto_fit"
     android:columnWidth="80dp"
     android:horizontalSpacing="5dp"
-    android:verticalSpacing="20dp"
+    android:verticalSpacing="5dp"
     tools:context="com.example.hurryup.app.MainActivity">
 
 </GridView>

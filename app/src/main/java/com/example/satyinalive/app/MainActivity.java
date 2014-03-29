@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
         uiHelper.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        ArrayList<Contact> profiles = new ArrayList<Contact>(10);
+        ArrayList<Contact> profiles = new ArrayList<Contact>(20);
         for (int i = 0; i < 10; i++) {
             profiles.add(new Contact("10", null));
         }
