@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
         ArrayList<Contact> profiles = new ArrayList<Contact>(10);
-        for (int i = 0; i<10; i++) {
+        for (int i = 0; i < 10; i++) {
             profiles.add(new Contact("10", null));
         }
         Adapter adapter = new Adapter(this);
@@ -46,10 +46,6 @@ public class MainActivity extends ActionBarActivity {
         GridView gridView = (GridView) findViewById(R.id.grid_view);
         gridView.setAdapter(adapter);
         Log.d("rawr", "workin");
-
-        getActionBar().setDisplayHomeAsUpEnabled(false);
-        getActionBar().setDisplayShowTitleEnabled(false);
-        getActionBar().setDisplayUseLogoEnabled(false);
     }
 
 

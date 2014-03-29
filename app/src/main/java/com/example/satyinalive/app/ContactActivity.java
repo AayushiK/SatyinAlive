@@ -11,7 +11,7 @@ import android.widget.TextView;
 /**
  * Created by aayushi on 3/29/14.
  */
-public class ContactActivity extends Activity {
+public class ContactActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,11 @@ public class ContactActivity extends Activity {
         setContentView(R.layout.activity_profile);
         TextView name = (TextView) findViewById(R.id.username);
         name.setText("Aayushi");
+
+    }
+
+    @Override
+    public void onClick(View v) {
 
     }
 }
