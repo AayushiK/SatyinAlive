@@ -1,11 +1,17 @@
 package com.example.satyinalive.app;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends Activity {
 
@@ -13,6 +19,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ArrayList<Contact> profiles = new ArrayList<Contact>(10);
+        for (int i = 0; i<10; i++) {
+            profiles.add(new Contact("10", null));
+        }
+        Adapter adapter = new Adapter(this);
+        adapter.setContacts(profiles);
+        GridView gridView = (GridView) findViewById(R.id.grid_view);
+        gridView.setAdapter(adapter);
         Log.d("rawr", "workin");
     }
 
