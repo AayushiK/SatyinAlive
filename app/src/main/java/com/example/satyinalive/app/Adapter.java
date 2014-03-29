@@ -1,7 +1,10 @@
 package com.example.satyinalive.app;
 
+import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -43,10 +46,24 @@ public class Adapter extends BaseAdapter{
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        final int index = i;
         ImageView image = new ImageView(mContext);
         image.setImageBitmap(BitmapFactory.decodeResource(
                 mContext.getResources(),
                 R.drawable.ic_launcher));
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainIntent = new Intent(mContext, ContactActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable(
+                        ContactConstants.ARG_CONTACT_PICTURE,
+                        mContacts.get(index).profilePic);
+                bundle.putString(ContactConstants.ARG_CONTACT_ID, mContacts.get(index).userID);
+                mainIntent.putExtras(bundle);
+                mContext.startActivity(mainIntent);
+            }
+        });
         //set onClickListener for image here to launch a new fragment.
         return image;
     }

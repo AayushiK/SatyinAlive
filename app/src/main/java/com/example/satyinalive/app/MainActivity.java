@@ -23,7 +23,7 @@ import com.facebook.model.GraphUser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private UiLifecycleHelper uiHelper;
