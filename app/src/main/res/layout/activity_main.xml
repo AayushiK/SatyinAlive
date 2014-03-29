@@ -1,4 +1,10 @@
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:background="@android:color/holo_blue_dark"
+    tools:ignore="NewApi">
+<GridView
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/grid_view"
     android:layout_width="fill_parent"
@@ -10,3 +16,4 @@
     tools:context="com.example.hurryup.app.MainActivity">
 
 </GridView>
+</LinearLayout>
