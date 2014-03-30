@@ -1,4 +1,4 @@
-package com.example.satyinalive.app;D/
+package com.example.satyinalive.app;
 
 import android.app.Activity;
 import android.app.Notification;
