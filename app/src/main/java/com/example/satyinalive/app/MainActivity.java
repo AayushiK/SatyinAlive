@@ -21,6 +21,8 @@ import com.facebook.Settings;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.model.GraphUser;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -165,7 +167,8 @@ public class MainActivity extends ActionBarActivity {
                         if(response.getError() != null ) {
                             Log.e("SMR", "Error");
                         } else {
-                            Log.e("SMR", "No error");
+                            JSONObject jsonObject = response.getGraphObject().getInnerJSONObject();
+                            Log.d("SMR", jsonObject.toString());
                         }
                     }
                 }

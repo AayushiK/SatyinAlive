@@ -12,6 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 /**
@@ -49,9 +51,7 @@ public class Adapter extends BaseAdapter{
     public View getView(int i, View view, ViewGroup viewGroup) {
         final int index = i;
         ImageView image = new ImageView(mContext);
-        image.setImageBitmap(BitmapFactory.decodeResource(
-                mContext.getResources(),
-                R.drawable.profile));
+        Picasso.with(mContext).load(mContacts.get(index).url).into(image);
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
