@@ -3,6 +3,7 @@ package com.example.satyinalive.app;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
@@ -56,10 +57,8 @@ public class Adapter extends BaseAdapter{
             public void onClick(View view) {
                 Intent mainIntent = new Intent(mContext, ContactActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putParcelable(
-                        ContactConstants.ARG_CONTACT_PICTURE,
-                        mContacts.get(index).profilePic);
                 bundle.putString(ContactConstants.ARG_CONTACT_ID, mContacts.get(index).userID);
+                bundle.putString(ContactConstants.ARG_CONTACT_NAME, mContacts.get(index).name);
                 mainIntent.putExtras(bundle);
                 mContext.startActivity(mainIntent);
             }
