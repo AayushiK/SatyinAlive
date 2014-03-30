@@ -40,9 +40,13 @@ public class MainActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_main);
         ArrayList<Contact> profiles = new ArrayList<Contact>(20);
-        for (int i = 0; i < 10; i++) {
-            profiles.add(new Contact("id", "url", "name"));
-        }
+
+        profiles.add(new Contact("667315466", "http://i.imgur.com/DvpvklR.png", "Zon Lai"));
+        profiles.add(new Contact("1000361", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1.0-1/c12.12.155.155/12471_10153275341671515_1307579091_a.jpg", "Fred Muriano"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c35.0.160.160/p160x160/1898084_233907656793488_1264213250_n.jpg", "Aayushi Kaushik"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c35.0.160.160/p160x160/1898084_233907656793488_1264213250_n.jpg", "Aayushi Kaushik"));
+
+
         Adapter adapter = new Adapter(this);
         adapter.setContacts(profiles);
         GridView gridView = (GridView) findViewById(R.id.grid_view);
