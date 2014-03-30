@@ -44,8 +44,18 @@ public class MainActivity extends ActionBarActivity {
         profiles.add(new Contact("667315466", "http://i.imgur.com/DvpvklR.png", "Zon Lai"));
         profiles.add(new Contact("1000361", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1.0-1/c12.12.155.155/12471_10153275341671515_1307579091_a.jpg", "Fred Muriano"));
         profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c35.0.160.160/p160x160/1898084_233907656793488_1264213250_n.jpg", "Aayushi Kaushik"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1.0-1/c9.0.160.160/p160x160/558913_10153246576660467_1727681530_n.jpg", "Sarah Chan"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1.0-1/c0.0.100.100/p100x100/1476261_10152456040273712_5839966_a.jpg", "Fred Tim"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc1/t1.0-1/c226.50.578.578/s160x160/1233330_10151722108782933_93095864_n.jpg", "Zora Holden"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c1.0.160.160/p160x160/1896854_10151932691745373_242079584_n.jpg", "Tara Smith"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/p100x100/1383978_10201681137853715_2041009579_a.jpg", "Jane Doe"));
+        profiles.add(new Contact("1000361", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1.0-1/c12.12.155.155/12471_10153275341671515_1307579091_a.jpg", "Fred Muriano"));
         profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c35.0.160.160/p160x160/1898084_233907656793488_1264213250_n.jpg", "Aayushi Kaushik"));
-
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t1.0-1/c9.0.160.160/p160x160/558913_10153246576660467_1727681530_n.jpg", "Sarah Chan"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1.0-1/c0.0.100.100/p100x100/1476261_10152456040273712_5839966_a.jpg", "Fred Tim"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc1/t1.0-1/c226.50.578.578/s160x160/1233330_10151722108782933_93095864_n.jpg", "Zora Holden"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/c1.0.160.160/p160x160/1896854_10151932691745373_242079584_n.jpg", "Tara Smith"));
+        profiles.add(new Contact("1106769", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1.0-1/p100x100/1383978_10201681137853715_2041009579_a.jpg", "Jane Doe"));
 
         Adapter adapter = new Adapter(this);
         adapter.setContacts(profiles);
